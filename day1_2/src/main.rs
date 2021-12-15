@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, Lines, Result};
 use std::path::Path;
 
-const FILE_PATH: &str = "../day1_input.txt";
+const FILE_PATH: &str = "../inputs/day1.txt";
 const WINDOW_SIZE: usize = 3;
 
 fn main() {

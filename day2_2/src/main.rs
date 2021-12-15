@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, Lines, Result};
 use std::path::Path;
 
-const FILE_PATH: &str = "../day2_input.txt";
+const FILE_PATH: &str = "../inputs/day2.txt";
 
 fn main() {
     let lines = read_lines(FILE_PATH).expect("Error when reading file");
@@ -20,10 +20,10 @@ fn main() {
                 "forward" => {
                     horizontal_position += amount;
                     depth += amount * aim;
-                },
+                }
                 "up" => aim -= amount,
                 "down" => aim += amount,
-                _ => panic!("Unknown order: {}", order)
+                _ => panic!("Unknown order: {}", order),
             }
         }
     }

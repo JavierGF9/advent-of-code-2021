@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, Lines, Result};
 use std::path::Path;
 
-const FILE_PATH: &str = "../day1_input.txt";
+const FILE_PATH: &str = "../inputs/day1.txt";
 
 fn main() {
     let lines = read_lines(FILE_PATH).expect("Error when reading file");
@@ -29,7 +29,10 @@ fn main() {
         }
     }
 
-    println!("\nLarger measurements than the previous measurement: {}", increase_counter)
+    println!(
+        "\nLarger measurements than the previous measurement: {}",
+        increase_counter
+    )
 }
 
 fn read_lines(filename: &str) -> Result<Lines<BufReader<File>>> {
